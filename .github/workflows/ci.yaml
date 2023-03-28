@@ -1,0 +1,36 @@
+name: CI Workflow
+
+on:
+  pull_request:
+    branches:
+      - stable
+  push:
+    branches:
+      - stable
+
+permissions: 
+  contents: write
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          bash -c 'sudo apt update; \
+          sudo apt install doxygen'
+      - name: Build Workspace
+        run: |
+          bash -c 'make'
+      - name: Run Tests
+        run: |
+          bash -c 'make test-ci'
+      - name: Build Docs
+        run: |
+          bash -c 'make docs'
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: generated-docs/html # The folder the action should deploy.
