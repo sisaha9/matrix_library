@@ -1,0 +1,12 @@
+digraph "matrix_library" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ddd467715ef9a87805666dfe4941b391 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ddd467715ef9a87805666dfe4941b391.html"];
+    dir_ddd467715ef9a87805666dfe4941b391 [shape=plaintext label="matrix_library"];
+    dir_8e25981d19fa7c4db5b59a1bdb9f7dd2 [shape=box label="cpu_simple" color="black" fillcolor="white" style="filled" URL="dir_8e25981d19fa7c4db5b59a1bdb9f7dd2.html"];
+    dir_1f8496e0e7c745c0ff184d0300c730e2 [shape=box label="utils" color="black" fillcolor="white" style="filled" URL="dir_1f8496e0e7c745c0ff184d0300c730e2.html"];
+  }
+  dir_8e25981d19fa7c4db5b59a1bdb9f7dd2->dir_1f8496e0e7c745c0ff184d0300c730e2 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000003.html"];
+}

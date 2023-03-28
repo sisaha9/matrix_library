@@ -1,0 +1,19 @@
+digraph "matrix_library/utils/matrix_utils.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="matrix_library/utils\l/matrix_utils.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Containing declaration of matrix utilities."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="matrix_library/cpu\l_simple/matrix_ops.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix__ops_8h.html",tooltip="Containing declaration of matrix operations in CPU simple version of library."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="examples/cpu_simple\l_example.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cpu__simple__example_8cc.html",tooltip="Containing example usage of matrix operations in CPU simple version of library."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="tests/cpu_simple_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cpu__simple__test_8cc.html",tooltip="Containing tests for cpu simple version of library."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="examples/matrix_utils\l_example.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$matrix__utils__example_8cc.html",tooltip="Containing example usage of matrix utilities."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="tests/utils_test.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$utils__test_8cc.html",tooltip="Containing tests for matrix utilities."];
+}
