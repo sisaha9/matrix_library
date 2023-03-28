@@ -73,6 +73,7 @@ $(function() {
 <li><a href="#matrix-multiplication-library">Matrix Multiplication Library</a><ul>
 <li><a href="#what-does-it-do">What does it do</a></li>
 <li><a href="#design-methodology">Design methodology</a></li>
+<li><a href="#build-and-run">Build and run</a></li>
 <li><a href="#if-i-had-more-time">If I had more time</a> </li>
 </ul>
 </li>
@@ -101,8 +102,22 @@ Design methodology</h1>
 <p>For that purpose I created a utility library that would provide several helper functions for implementing and testing the functions of matrix multiplication and transposition</p>
 <p>As of writing this I have been able to implement the CPU simple version. Under <code><a class="el" href="namespacematrix__library.html">matrix_library</a></code> you can see the <code>cpu_simple</code> and <code>utils</code> libraries. These are tested extensively in <code>tests</code> folder under several cases (empty matrices, empty vectors, scalars, vectors and matrices) over 3 types: <code>int</code>, <code>float</code> and <code>double</code>. There are also example usages of each function in each library under the <code>examples</code> folder.</p>
 <p>For purposes of documentation I leveraged <code>doxygen</code>. In the website <a href="https://sisaha9.github.io/matrix_library/">here</a> if you click on <code>Namespaces</code> in the horizontal navigation bar you will see a view of the library. Clicking on the innermost values in each list will give you a rundown of each function, the code, what it takes, what it returns and some explicit error conditions I have made</p>
-<p>Finally, I have also created a GIthub Actions file here monitored by Dependabot for updates to any actions used. It builds and runs all unit tests in the code as well as deploys the live documentation page </p>
+<p>Finally, I have also created a GIthub Actions file here monitored by Dependabot for updates to any actions used. It builds and runs all unit tests in the code as well as deploys the live documentation page</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
+Build and run</h1>
+<p>First clone this repo</p>
+<div class="fragment"><div class="line">git clone https://github.com/sisaha9/matrix_library.git</div>
+</div><!-- fragment --><p>To build run </p><div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><p>To list examples run </p><div class="fragment"><div class="line">make list-examples</div>
+</div><!-- fragment --><p>To run an example </p><div class="fragment"><div class="line">make run-example EXAMPLE=&lt;example_name&gt; # Replace &lt;example_name&gt; with your example executable. Ignore the file path and just put the name</div>
+</div><!-- fragment --><p>To list tests </p><div class="fragment"><div class="line">make list-tests</div>
+</div><!-- fragment --><p>To run a test </p><div class="fragment"><div class="line">make run-test TEST=&lt;test_name&gt; # Replace &lt;test_name&gt; with your test executable. Ignore the file path and just put the name</div>
+</div><!-- fragment --><p>To run all tests </p><div class="fragment"><div class="line">make test</div>
+</div><!-- fragment --><p>To create docs </p><div class="fragment"><div class="line">make docs</div>
+</div><!-- fragment --><p>To clean your build artifacts </p><div class="fragment"><div class="line">make clean</div>
+</div><!-- fragment --><p>To clean your docs artifacts </p><div class="fragment"><div class="line">make clean-docs</div>
+</div><!-- fragment --><p>To clean everything </p><div class="fragment"><div class="line">make purge</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
 If I had more time</h1>
 <p>I wrote this mostly in half a day. If I had more time I would do the following</p><ol type="1">
 <li>Add the GPU and CPU parallel versions of the code</li>
@@ -110,7 +125,10 @@ If I had more time</h1>
 <li>Add some timing code to benchmark each version</li>
 <li>Re-implement utilities to make use of the GPU and CPU parallel versions for larger operations</li>
 <li>Make use of <code>TYPED_TEST</code> in <code>Google Tests</code> framework to enable testing on multiple data types</li>
-<li>Write test macros for a bunch of the tests </li>
+<li>Write test macros for a bunch of the tests</li>
+<li>Write tests for the <code>PrintMatrix</code> function which I didn't to save time and because it was not critical to the running of the library</li>
+<li>Add more documentation to the examples and some of the CMake files in this repository</li>
+<li>Add more documentation on the Github Actions pipeline </li>
 </ol>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
