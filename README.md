@@ -35,6 +35,7 @@ As of writing this I have been able to implement the CPU simple version. Under `
 
 For purposes of documentation I leveraged `doxygen`. In the website [here](https://sisaha9.github.io/matrix_library/) if you click on `Namespaces` in the horizontal navigation bar you will see a view of the library. Clicking on the innermost values in each list will give you a rundown of each function, the code, what it takes, what it returns and some explicit error conditions I have made
 
+Finally, I have also created a GIthub Actions file here monitored by Dependabot for updates to any actions used. It builds and runs all unit tests in the code as well as deploys the live documentation page
 ## If I had more time
 
 I wrote this mostly in half a day. If I had more time I would do the following
