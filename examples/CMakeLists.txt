@@ -1,0 +1,5 @@
+add_executable(cpu_simple_example cpu_simple_example.cc)
+target_link_libraries(cpu_simple_example PRIVATE utils cpu_simple matrix_library)
+
+add_executable(matrix_utils_example matrix_utils_example.cc)
+target_link_libraries(matrix_utils_example PRIVATE utils matrix_library)

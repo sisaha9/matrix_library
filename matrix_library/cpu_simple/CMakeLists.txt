@@ -1,0 +1,2 @@
+add_library(cpu_simple INTERFACE)
+target_link_libraries(cpu_simple INTERFACE matrix_library)
